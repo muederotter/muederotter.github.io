@@ -1,46 +1,55 @@
 <!DOCTYPE html>
 <html>
 <head>
-    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="style.css">
 </head>
-<form id="myForm">
-  <label for="focus">Focus (1-60):</label>
-  <input type="number" id="focus" name="focus" min="1" max="60" value="25" required><br><br>
-  <label for="break">Break (1-60):</label>
-  <input type="number" id="break" name="break" min="1" max="60" value="5" required><br><br>
-  <label for="reps">Reps (1-20):</label>
-  <input type="number" id="reps" name="reps" min="1" max="20" value="4" required><br><br>
-  <label for="color">Color:</label>
-  <input type="color" id="color" name="color"><br><br>
-  <label for="timerFont">Timer Font:</label>
-  <select name="timerFont" id="timerFont">
-    <option value="VT323">VT323</option>
-    <option value="MontserratBold">Montserrat Bold</option>
-    <option value="MontserratBoldItalic">Montserrat Bold Italic</option>
-  </select><br><br>
-  <label for="sessionFont">Session Font:</label>
-  <select name="sessionFont" id="sessionFont">
-    <option value="VT323">VT323</option>
-    <option value="MontserratBold">Montserrat Bold</option>
-    <option value="MontserratBoldItalic">Montserrat Bold Italic</option>
-  </select><br><br>
-  <label for="alignment">Alignment:</label>
-  <select name="alignment" id="alignment">
-    <option value="left">Left</option>
-    <option value="right">Right</option>
-  </select><br><br>
-  <input type="submit">
-</form>
+<h1>Petite Pomodoro</h1>
+<div class="container">
+  <div class="formcontainer">
+    <form id="myForm">
+      <label for="focus">Focus:</label>
+      <input type="number" id="focus" name="focus" min="1" max="60" value="25" required>
+      <label for="focus">min</label><br><br>
+      <label for="break">Break:</label>
+      <input type="number" id="break" name="break" min="1" max="60" value="5" required>
+      <label for="focus">min</label><br><br>
+      <label for="reps">Reps:</label>
+      <input type="number" id="reps" name="reps" min="1" max="20" value="4" required><br><br>
+      <label for="color">Color:</label>
+      <input type="color" id="color" name="color"><br><br>
+      <label for="sessionFont">Session Font:</label>
+      <select name="sessionFont" id="sessionFont">
+        <option value="VT323">VT323</option>
+        <option value="MontserratBold">Montserrat Bold</option>
+        <option value="MontserratBoldItalic">Montserrat Bold Italic</option>
+      </select><br><br>
+      <label for="timerFont">Timer Font:</label>
+      <select name="timerFont" id="timerFont">
+        <option value="VT323">VT323</option>
+        <option value="MontserratBold">Montserrat Bold</option>
+        <option value="MontserratBoldItalic">Montserrat Bold Italic</option>
+      </select><br><br>
+      <label for="alignment">Alignment:</label>
+      <select name="alignment" id="alignment">
+        <option value="left">Left</option>
+        <option value="right">Right</option>
+      </select>
+    </form>
+  </div>
+  
+  <div class="subcontainer">
+    <p id="previewtext">Preview:</p>
+    <div class="previewcontainer">
+      <div id='preview'>
+        <p style='font-size:33px; margin-bottom:-20px; margin-left: 10px; margin-right: 10px; margin-top: 0px; padding-top: 0px;'>Focus</p>
+        <p style='font-size:100px; margin-top:0; margin-bottom: 10px; padding-bottom: 0px;'>25:00</p>
+      </div>
+    </div>
+  </div>
+
+</div>
 
 <p>Link: <a id='link' href='#'>Click here to copy link</a></p>
-
-<div style='border:1px solid black; padding:10px; display:inline-block'>
-  <p style='margin:0'>Preview:</p>
-  <div id='preview'>
-    <p style='font-size:33px; margin-bottom:-20px; margin-left: 10px; margin-right: 10px;'>Focus</p>
-    <p style='font-size:100px; margin-top:0'>25:00</p>
-  </div>
-</div>
 
 <script>
 function updateLinkAndPreview() {
